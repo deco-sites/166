@@ -6,9 +6,12 @@ import config from "./deno.json" assert { type: "json" };
 import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$0 from "./routes/_app.tsx";
-import * as $$$$$$$$0 from "./sections/Head.tsx";
-import * as $$$$$$$$1 from "./sections/DesignSystem.tsx";
+import * as $$$$$0 from "./islands/SliderJS.tsx";
+import * as $$$$$$$$0 from "./sections/DesignSystem.tsx";
+import * as $$$$$$$$1 from "./sections/Gallery/Gallery.tsx";
 import * as $$$$$$$$2 from "./sections/GetStarted.tsx";
+import * as $$$$$$$$3 from "./sections/Head.tsx";
+import * as $$$$$$$$4 from "./sections/MainCarrousel/MainCarrousel.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -111,8 +114,10 @@ import * as i2$$$$$12 from "deco-sites/std/actions/vtex/cart/updateItemPrice.ts"
 import * as i2$$$$$13 from "deco-sites/std/actions/vtex/cart/updateItems.ts";
 import * as i2$$$$$14 from "deco-sites/std/actions/vtex/cart/updateProfile.ts";
 import * as i2$$$$$15 from "deco-sites/std/actions/vtex/cart/updateUser.ts";
-import * as i2$$$$$16 from "deco-sites/std/actions/vtex/wishlist/addItem.ts";
-import * as i2$$$$$17 from "deco-sites/std/actions/vtex/wishlist/removeItem.ts";
+import * as i2$$$$$16 from "deco-sites/std/actions/vtex/newsletter/subscribe.ts";
+import * as i2$$$$$17 from "deco-sites/std/actions/vtex/notifyme.ts";
+import * as i2$$$$$18 from "deco-sites/std/actions/vtex/wishlist/addItem.ts";
+import * as i2$$$$$19 from "deco-sites/std/actions/vtex/wishlist/removeItem.ts";
 
 const manifest = {
   "functions": {
@@ -158,13 +163,18 @@ const manifest = {
     "./routes/live/previews/[...block].tsx": $live_previews,
     "./routes/live/workbench.ts": $live_workbench,
   },
+  "islands": {
+    "./islands/SliderJS.tsx": $$$$$0,
+  },
   "sections": {
     "$live/sections/PageInclude.tsx": i2$$$$0,
     "$live/sections/Slot.tsx": i2$$$$1,
     "$live/sections/UseSlot.tsx": i2$$$$2,
-    "deco-sites/166/sections/DesignSystem.tsx": $$$$$$$$1,
+    "deco-sites/166/sections/DesignSystem.tsx": $$$$$$$$0,
+    "deco-sites/166/sections/Gallery/Gallery.tsx": $$$$$$$$1,
     "deco-sites/166/sections/GetStarted.tsx": $$$$$$$$2,
-    "deco-sites/166/sections/Head.tsx": $$$$$$$$0,
+    "deco-sites/166/sections/Head.tsx": $$$$$$$$3,
+    "deco-sites/166/sections/MainCarrousel/MainCarrousel.tsx": $$$$$$$$4,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$3,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$4,
     "deco-sites/std/sections/configOCC.global.tsx": i2$$$$5,
@@ -237,8 +247,10 @@ const manifest = {
     "deco-sites/std/actions/vtex/cart/updateItems.ts": i2$$$$$13,
     "deco-sites/std/actions/vtex/cart/updateProfile.ts": i2$$$$$14,
     "deco-sites/std/actions/vtex/cart/updateUser.ts": i2$$$$$15,
-    "deco-sites/std/actions/vtex/wishlist/addItem.ts": i2$$$$$16,
-    "deco-sites/std/actions/vtex/wishlist/removeItem.ts": i2$$$$$17,
+    "deco-sites/std/actions/vtex/newsletter/subscribe.ts": i2$$$$$16,
+    "deco-sites/std/actions/vtex/notifyme.ts": i2$$$$$17,
+    "deco-sites/std/actions/vtex/wishlist/addItem.ts": i2$$$$$18,
+    "deco-sites/std/actions/vtex/wishlist/removeItem.ts": i2$$$$$19,
   },
   "accounts": {
     "deco-sites/std/accounts/occ.ts": i2$$0,
@@ -247,7 +259,6 @@ const manifest = {
     "deco-sites/std/accounts/vtex.ts": i2$$3,
     "deco-sites/std/accounts/yourViews.ts": i2$$4,
   },
-  "islands": {},
   "config": config,
   "baseUrl": import.meta.url,
 };
